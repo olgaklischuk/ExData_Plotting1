@@ -2,7 +2,7 @@ Sys.setlocale("LC_ALL",locale="English")
 
 if(!require("dplyr")){library("dplyr")}
 library("lubridate")
-url<-"https://archive.ics.uci.edu/ml/machine-learning-databases/00235/household_power_consumption.zip"
+
 #wd####
 setwd("~/OneDrive/Jupyter notebook/Exploratory Data analysis")
 
