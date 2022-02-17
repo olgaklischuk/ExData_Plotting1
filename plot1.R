@@ -4,11 +4,11 @@ if(!require("dplyr")){library("dplyr")}
 library("lubridate")
 
 #wd####
-setwd("~/OneDrive/Jupyter notebook/Exploratory Data analysis")
+setwd("~/Exploratory Data analysis")
 
 #loading data sample####
 
-directory<-"~/OneDrive/Jupyter notebook/Exploratory Data analysis/household_power_consumption.txt"#directory, where household power consumption is placed
+directory<-"~/Exploratory Data analysis/household_power_consumption.txt"#directory, where household power consumption is placed
 household_power_consumption<- read.csv(directory, sep=";")
 # load(paste(getwd(),"/working.environment/working.environment.RData",sep=""))
 View(household_power_consumption)
@@ -32,14 +32,13 @@ for(i in 4:length(var)-1){power[,i]<-as.numeric(power[,i])}
   power %>%
   filter(Date>=as.Date("2007/02/01")&Date<=as.Date("2007/02/02"))
 
-for(i in 4:length(var)-1){power.1[,i]<-as.numeric(power.1[,i])}
 
   power.1<-as.data.frame(power.1)
   
   View(power.1)
 
-dir.create(paste(strsplit(getwd(),split = "/OneDrive")[[1]][1],"/OneDrive/Jupyter notebook/Exploratory Data analysis/Peer-assignment-review-1",sep=""))
-setwd(paste(strsplit(getwd(),split = "/OneDrive")[[1]][1],"/OneDrive/Jupyter notebook/Exploratory Data analysis/Peer-assignment-review-1",sep=""))
+dir.create(paste(strsplit(getwd(),split = "/OneDrive")[[1]][1],"/Exploratory Data analysis/Peer-assignment-review-1",sep=""))
+setwd(paste(strsplit(getwd(),split = "/OneDrive")[[1]][1],"/Exploratory Data analysis/Peer-assignment-review-1",sep=""))
 
 #plotting####
 # dev.cur()
